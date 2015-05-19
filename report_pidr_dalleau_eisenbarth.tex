@@ -1,0 +1,100 @@
+\documentclass[pidr]{tnreport}
+%\documentclass[confidential,pidr]{tnreport} % If you are writing confidential report
+
+\def\reportTitle{Winter is Coming} % Titre du mémoire
+\def\reportLongTitle{Winter is Coming -- You know nothing Jon Snow} % Titre plus long du mémoire
+
+\def\reportAuthor{Jon Snow\\ Samwell Tarly}
+\def\reportAuthorEmail{\email{jon@castleblack.com}\\ \email{tarly@casteblack.com}} % Courriel de l'élève
+
+\def\reportSupervisor{Eddard Stark} % Prénom Nom de l'encadrant industriel
+
+\def\reportCompany{Home Box Office} % Nom de l'entreprise d'accueil
+\def\reportCompanyAddress{numéro, rue}  % Adresse de l'entreprise
+\def\reportCompanyCity{code postal, VILLE} % Adresse (cont.) de l'entreprise
+\def\reportCompanyPhone{téléphone} % Téléphone de l'entreprise
+\def\reportCompanyLogoPath{figures/anonymous_company-logo} % Logo de l'entreprise -- comment this definition to remove company logo
+
+\def\place{Winterfell} % Ville pour la signature pour l'engagement anti-plagiat
+\def\date{\today} % Date pour la signature de l'engagement anti-plagiat
+
+\def\reportProjectCustomer{Projet réalisé pour l'équipe Night's Watch du laboratoire HBO}
+
+\begin{document}
+  
+\input{chapters/title_plagiarism_secondtitle}
+
+\input{chapters/acknowledgements}
+
+\cleardoublepage
+
+\input{chapters/foreword}
+
+\cleardoublepage
+
+\renewcommand{\baselinestretch}{0.5}\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1.0}\normalsize
+\cleardoublepage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{chapters/introduction}
+
+\cleardoublepage
+
+\input{chapters/context}
+
+\cleardoublepage
+
+\input{chapters/etat_art}
+
+\cleardoublepage
+
+\input{chapters/travail_realise.tex}
+
+\cleardoublepage
+
+\input{chapters/results.tex}
+
+\cleardoublepage
+
+\input{chapters/conclusion}
+
+\cleardoublepage
+\renewcommand{\tocbibname}{Bibliographie / Webographie}
+\bibliographystyle{plain}
+\bibliography{bib/example} % See example.bib 
+
+\cleardoublepage
+
+\listoffigures
+\cleardoublepage
+
+\listoftables
+\cleardoublepage
+
+\input{chapters/glossary}
+
+\cleardoublepage
+\renewcommand{\thesubsection}{\Roman{subsection}}
+
+\appendix
+\part*{Annexes}
+\addcontentsline{toc}{part}{Annexes}
+\cleardoublepage
+
+\input{appendixes/appendix1.tex}
+
+\cleardoublepage
+
+\input{appendixes/appendix2.tex}
+
+\cleardoublepage
+
+\thispagestyle{empty}
+
+\input{chapters/abstract}
+
+\end{document}
